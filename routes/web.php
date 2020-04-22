@@ -18,5 +18,12 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('home');
+    return view('user/home');
 });
+
+Route::get('/user/home','UserController@user_home')->name('user.home');
+Route::get('/user/profile','UserController@user_profile')->name('user.profile');
+Route::get('/user/search','UserController@user_search')->name('user.search');
+Route::get('/user/upload','UserController@user_upload')->name('user.upload');
+Route::get('/user/stories','UserController@user_stories')->name('user.stories');
+

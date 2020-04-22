@@ -30,7 +30,7 @@ body {
 }
 header {
     background: #174b86;
-    height: 100px;
+    height: 90px;
     padding-top: 10px;
 }
 .inner {
@@ -67,19 +67,16 @@ nav > ul > li {
 nav > ul > li  .infor{
 font-size:30px;
 }
-nav > ul li ul li {
-    width: 100%;
-    text-align: left;
-}
+
 nav ul li:hover {
     cursor: pointer;
     position: relative;
+    
 }
-nav ul li:hover > ul {
-    display: block;
-}
+
 nav ul li:hover > a {
     color: #777;
+    text-decoration: none;
 }
 nav > ul > li > a {
     cursor: pointer;
@@ -178,7 +175,7 @@ label {
   .posts .post1 {
     background-color: DodgerBlue;
     width: 300px;
-    height: 400px;
+    height: 300px;
     
     margin: 10px;
     text-align: center;
@@ -188,6 +185,6 @@ label {
   .posts a{
       text-decoration: none;
       text-align: center;
-      margin-top:200px;
+      margin-top:150px;
   }
  
