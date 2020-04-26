@@ -21,13 +21,15 @@ Route::get('/', function () {
 //     return view('user/home');
 // });
 
-Route::get('/user/home','UserController@user_home')->name('user.home');
-Route::get('/user/profile','UserController@user_profile')->name('user.profile');
-Route::get('/user/search','UserController@user_search')->name('user.search');
-Route::get('/user/upload','UserController@user_upload')->name('user.upload');
-Route::get('/user/stories','UserController@user_stories')->name('user.stories');
+Route::get('/user/home','UserController@user_home')->name('user.home')->middleware('auth');
+Route::get('/user/profile','UserController@user_profile')->name('user.profile')->middleware('auth');
 
+Route::get('/user/search','UserController@user_search')->name('user.search')->middleware('auth');
+Route::get('/user/upload','UserController@user_upload')->name('user.upload')->middleware('auth');
+Route::get('/user/stories','UserController@user_stories')->name('user.stories')->middleware('auth');
 
+Route::get('/user/header','UserController@user_header')->name('user.header');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/{username}','FollowerController@user_viewProfile');
